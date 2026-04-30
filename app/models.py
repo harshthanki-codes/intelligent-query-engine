@@ -94,7 +94,7 @@ class CostTracking(Base):
     query_id = Column(String(36), ForeignKey("query_history.id"), nullable=True)
     cost_type = Column(String(50), nullable=False)
     cost_amount = Column(Float, default=0.0)
-    metadata = Column(Text, nullable=True)
+    details = Column(Text, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow, index=True)
     
     __table_args__ = (
